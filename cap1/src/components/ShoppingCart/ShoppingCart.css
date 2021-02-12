@@ -1,0 +1,28 @@
+#shopping-cart {
+    max-width: 95%;
+    margin: auto;
+  }
+  
+  #shopping-cart p {
+    margin: 0 0 0 10px;
+  }
+  
+  #shopping-cart .cart-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  #shopping-cart .cart-item img {
+    max-height: 100px;
+    max-width: 100px;
+  }
+  
+  #shopping-cart .alert {
+    text-align: right;
+  }
+  
+  #shopping-cart .table {
+    width: 50%;
+    margin-left: auto;
+  }
