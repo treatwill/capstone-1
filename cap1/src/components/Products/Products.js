@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import { Alert, Button } from 'react-bootstrap';
+import { Alert, Button, Dropdown } from 'react-bootstrap';
+
 
 import prodOne from './image0.jpeg';
 import prodTwo from './image1.jpeg';
@@ -19,96 +20,102 @@ import prodFourteen from './image13.jpeg';
 import './Products.css';
 import { Cart } from '../../App';
 
+
 export const prodObjArr = [
   {
     name: 'Adidas',
-    key: 'prod-one',
+    key: 1,
     image: prodOne,
     price: 12,
   },
   {
     name: 'Nike',
-    key: 'prod-two',
+    key: 2,
     image: prodTwo,
     price: 12,
   },
   {
     name: 'Lebron',
-    key: 'prod-three',
+    key: 3,
     image: prodThree,
     price: 12,
   },
   {
     name: 'Lebron',
-    key: 'prod-four',
+    key: 4,
     image: prodFour,
     price: 12,
   },
   {
     name: 'Adidas',
-    key: 'prod-five',
+    key: 5,
     image: prodFive,
     price: 12,
   },
   {
     name: 'Jordan',
-    key: 'prod-six',
+    key: 6,
     image: prodSix,
     price: 12,
   },
   {
     name: 'Jordan',
-    key: 'prod-seven',
+    key: 7,
     image: prodSeven,
     price: 12,
   },
   {
     name: 'Puma',
-    key: 'prod-eight',
+    key: 8,
     image: prodEight,
     price: 12,
   },
   {
     name: 'Jordan',
-    key: 'prod-nine',
+    key: 9,
     image: prodNine,
     price: 12,
   },
   {
     name: 'Lebron',
-    key: 'prod-ten',
+    key: 10,
     image: prodTen,
     price: 12,
   },
   {
     name: 'Kobe',
-    key: 'prod-eleven',
+    key: 11,
     image: prodEleven,
     price: 12,
   },
   {
     name: 'Kobe',
-    key: 'prod-twelve',
+    key: 12,
     image: prodTwelve,
     price: 12,
   },
   {
     name: 'Jordan',
-    key: 'prod-thirteen',
+    key: 13,
     image: prodThirteen,
     price: 12,
   },
   {
     name: 'Adidas',
-    key: 'prod-fourteen',
+    key: 14,
     image: prodFourteen,
     price: 12,
   }
 ];
 
 
+
+
 const Products = () => {
   const { cart, setCart } = useContext(Cart);
+ 
+
+
 
   const addToCart = (tempProd) => {
     const product = { ...tempProd };
@@ -119,7 +126,7 @@ const Products = () => {
 
     setCart(tempCart);
   };
-//add 
+
   return (
     <div id="product-page">
       <h2>Products</h2>
@@ -130,13 +137,25 @@ const Products = () => {
   );
 };
 
-const IndProdDisp = ({ product, addToCart }) => (
-  <Alert variant="info">
+const IndProdDisp = ({ product, addToCart, setButtonPopup }) => (
+  <Alert variant="primary">
     <img src={product.image} alt={product.name} align="left" />
     <p>{product.name}</p>
+  <Dropdown>
+  <Dropdown.Toggle variant="warning" id="dropdown-basic">
+    Details
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Dropdown.Item>{product.key}</Dropdown.Item>
+    <Dropdown.Item>{product.price}</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
     <Button size="sm" onClick={() => addToCart(product)}>
       Add To Cart
     </Button>
+    
   </Alert>
 );
 

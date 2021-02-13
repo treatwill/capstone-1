@@ -1,15 +1,23 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+//import ReactDom from 'react-dom';
 import { Navbar, Nav, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './NavBar.css';
 
+/*const handleChange = (e) => {
+  e.pre
+};*/
+
 const NavBar = ({ linkObjArr }) => (
   <Navbar bg="dark" variant="dark">
     <Link to="/">
       <Navbar.Brand>Treat Kicks</Navbar.Brand>
-      <input type="text" placeholder="Search" />
+      <input type="text" 
+      placeholder="Search" 
+      onChange={linkObjArr}
+      />
+
     </Link>
     <Nav className="ml-auto">
       {linkObjArr.map((linkObj) => (
