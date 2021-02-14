@@ -25,6 +25,7 @@ export const prodObjArr = [
   {
     name: 'NMD_R1 Neighborhood',
     manufacturer: 'Adidas',
+    key: 'prod-one',
     image: prodOne,
     price: 180.00,
     serial: '#1111-11'
@@ -32,6 +33,7 @@ export const prodObjArr = [
   {
     name: 'Off-White x Hyperdunk',
     manufacturer: 'Nike',
+    key: 'prod-two',
     image: prodTwo,
     price: 250.00,
     serial: '#1111-12'
@@ -39,6 +41,7 @@ export const prodObjArr = [
   {
     name: 'Lebron x Lebron 15 Stained Glass',
     manufacturer: 'Nike',
+    key: 'prod-three',
     image: prodThree,
     price: 260.00,
     serial: '#1111-13'
@@ -46,6 +49,7 @@ export const prodObjArr = [
   {
     name: 'Lebron 15 Orange Box PE',
     manufacturer: 'Nike',
+    key: 'prod-four',
     image: prodFour,
     price: 220.00,
     serial: '#1111-14'
@@ -53,6 +57,7 @@ export const prodObjArr = [
   {
     name: 'Pharrell x NMD Human Race',
     manufacturer: 'Adidas',
+    key: 'prod-five',
     image: prodFive,
     price: 220.00,
     serial: '#1111-15'
@@ -60,6 +65,7 @@ export const prodObjArr = [
   {
     name: 'Air Jordan 11 Retro Legend Blue',
     manufacturer: 'Nike',
+    key: 'prod-six',
     image: prodSix,
     price: 220.00,
     serial: '#1111-16'
@@ -67,6 +73,7 @@ export const prodObjArr = [
   {
     name: 'OVO x Air Jordan 8 Retro',
     manufacturer: 'Nike',
+    key: 'prod-seven',
     image: prodSeven,
     price: 225.00,
     serial: '#1111-17'
@@ -74,6 +81,7 @@ export const prodObjArr = [
   {
     name: 'J.Cole x RS-Dreamer',
     manufacturer: 'Puma',
+    key: 'prod-eight',
     image: prodEight,
     price: 125.00,
     serial: '#1111-18'
@@ -81,6 +89,7 @@ export const prodObjArr = [
   {
     name: 'Air Jordan 11 Retro Win Like 9',
     manufacturer: 'Nike',
+    key: 'prod-nine',
     image: prodNine,
     price: 220.00,
     serial: '#1111-19'
@@ -88,6 +97,7 @@ export const prodObjArr = [
   {
     name: 'Lebron 15 Griffey PE',
     manufacturer: 'Nike',
+    key: 'prod-ten',
     image: prodTen,
     price: 220.00,
     serial: '#1111-21'
@@ -96,6 +106,7 @@ export const prodObjArr = [
   {
     name: 'Kobe 9 Elite Christmas',
     manufacturer: 'Nike',
+    key: 'prod-eleven',
     image: prodEleven,
     price: 180.00,
     serial: '#1111-22'
@@ -104,6 +115,7 @@ export const prodObjArr = [
   {
     name: 'Kobe 6 Proto Grinch',
     manufacturer: 'Nike',
+    key: 'prod-twelve',
     image: prodTwelve,
     price: 180.00,
     serial: '#1111-23'
@@ -111,6 +123,7 @@ export const prodObjArr = [
   {
     name: 'Dior x Air Jordan 1 High',
     manufacturer: 'Nike',
+    key: 'prod-thirteen',
     image: prodThirteen,
     price: 2000.00,
     serial: '#1111-24'
@@ -118,6 +131,7 @@ export const prodObjArr = [
   {
     name: 'ZX 10000 Krusty Burger Shoes',
     manufacturer: 'Adidas',
+    key: 'prod-fourteen',
     image: prodFourteen,
     price: 130.00,
     serial: '#1111-25'
@@ -175,4 +189,4 @@ const IndProdDisp = ({ product, addToCart, setButtonPopup }) => (
   </Alert>
 );
 
-export default Products;
+export default Products; 

@@ -18,7 +18,7 @@ const ShoppingCart = () => {
 
     setCart(tempCart);
     return null;
-  }; 
+  };
 
   const removeItem = (product) => {
     const prodIndex = cart.map((item) => item.key).indexOf(product.key);
@@ -59,7 +59,7 @@ const Totals = ({ cart }) => {
       </tbody>
     </Table>
   );
-}; 
+};
 
 const CartItem = ({ product, changeQuantity }) => (
   <Alert variant="info">
