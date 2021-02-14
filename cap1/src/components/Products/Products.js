@@ -159,7 +159,7 @@ const Products = () => {
 
   return (
     <div id="product-page">
-      <h2>Products</h2>
+      <h2>Kicks</h2>
       {prodObjArr.map((product) => (
         <IndProdDisp key={`prod-disp${product.key}`} product={product} addToCart={addToCart} />
       ))}
