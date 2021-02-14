@@ -23,88 +23,104 @@ import { Cart } from '../../App';
 
 export const prodObjArr = [
   {
-    name: 'Adidas',
-    key: 1,
+    name: 'NMD_R1 Neighborhood',
+    manufacturer: 'Adidas',
     image: prodOne,
-    price: 12,
+    price: 180.00,
+    serial: '#1111-11'
   },
   {
-    name: 'Nike',
-    key: 2,
+    name: 'Off-White x Hyperdunk',
+    manufacturer: 'Nike',
     image: prodTwo,
-    price: 12,
+    price: 250.00,
+    serial: '#1111-12'
   },
   {
-    name: 'Lebron',
-    key: 3,
+    name: 'Lebron x Lebron 15 Stained Glass',
+    manufacturer: 'Nike',
     image: prodThree,
-    price: 12,
+    price: 260.00,
+    serial: '#1111-13'
   },
   {
-    name: 'Lebron',
-    key: 4,
+    name: 'Lebron 15 Orange Box PE',
+    manufacturer: 'Nike',
     image: prodFour,
-    price: 12,
+    price: 220.00,
+    serial: '#1111-14'
   },
   {
-    name: 'Adidas',
-    key: 5,
+    name: 'Pharrell x NMD Human Race',
+    manufacturer: 'Adidas',
     image: prodFive,
-    price: 12,
+    price: 220.00,
+    serial: '#1111-15'
   },
   {
-    name: 'Jordan',
-    key: 6,
+    name: 'Air Jordan 11 Retro Legend Blue',
+    manufacturer: 'Nike',
     image: prodSix,
-    price: 12,
+    price: 220.00,
+    serial: '#1111-16'
   },
   {
-    name: 'Jordan',
-    key: 7,
+    name: 'OVO x Air Jordan 8 Retro',
+    manufacturer: 'Nike',
     image: prodSeven,
-    price: 12,
+    price: 225.00,
+    serial: '#1111-17'
   },
   {
-    name: 'Puma',
-    key: 8,
+    name: 'J.Cole x RS-Dreamer',
+    manufacturer: 'Puma',
     image: prodEight,
-    price: 12,
+    price: 125.00,
+    serial: '#1111-18'
   },
   {
-    name: 'Jordan',
-    key: 9,
+    name: 'Air Jordan 11 Retro Win Like 9',
+    manufacturer: 'Nike',
     image: prodNine,
-    price: 12,
+    price: 220.00,
+    serial: '#1111-19'
   },
   {
-    name: 'Lebron',
-    key: 10,
+    name: 'Lebron 15 Griffey PE',
+    manufacturer: 'Nike',
     image: prodTen,
-    price: 12,
+    price: 220.00,
+    serial: '#1111-21'
+  
   },
   {
-    name: 'Kobe',
-    key: 11,
+    name: 'Kobe 9 Elite Christmas',
+    manufacturer: 'Nike',
     image: prodEleven,
-    price: 12,
+    price: 180.00,
+    serial: '#1111-22'
+
   },
   {
-    name: 'Kobe',
-    key: 12,
+    name: 'Kobe 6 Proto Grinch',
+    manufacturer: 'Nike',
     image: prodTwelve,
-    price: 12,
+    price: 180.00,
+    serial: '#1111-23'
   },
   {
-    name: 'Jordan',
-    key: 13,
+    name: 'Dior x Air Jordan 1 High',
+    manufacturer: 'Nike',
     image: prodThirteen,
-    price: 12,
+    price: 2000.00,
+    serial: '#1111-24'
   },
   {
-    name: 'Adidas',
-    key: 14,
+    name: 'ZX 10000 Krusty Burger Shoes',
+    manufacturer: 'Adidas',
     image: prodFourteen,
-    price: 12,
+    price: 130.00,
+    serial: '#1111-25'
   }
 ];
 
@@ -138,7 +154,7 @@ const Products = () => {
 };
 
 const IndProdDisp = ({ product, addToCart, setButtonPopup }) => (
-  <Alert variant="primary">
+  <Alert>
     <img src={product.image} alt={product.name} align="left" />
     <p>{product.name}</p>
   <Dropdown>
@@ -147,12 +163,12 @@ const IndProdDisp = ({ product, addToCart, setButtonPopup }) => (
   </Dropdown.Toggle>
 
   <Dropdown.Menu>
-    <Dropdown.Item>{product.key}</Dropdown.Item>
+    <Dropdown.Item>{product.manufacturer}</Dropdown.Item>
+    <Dropdown.Item>{product.serial}</Dropdown.Item>
     <Dropdown.Item>{product.price}</Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
-    <Button size="sm" onClick={() => addToCart(product)}>
+    <Button size="sm" variant="warning" onClick={() => addToCart(product)}>
       Add To Cart
     </Button>
     

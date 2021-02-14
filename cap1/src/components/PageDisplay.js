@@ -2,9 +2,8 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Products from './Products/Products';
 import ShoppingCart from './ShoppingCart/ShoppingCart';
-import Profile from './Profile';
 import NavBar from './NavBar/NavBar';
-import { faTags, faShoppingCart, faIdBadge } from '@fortawesome/free-solid-svg-icons';
+import { faTags, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 
 const PageDisplay = () => {
@@ -27,15 +26,7 @@ const PageDisplay = () => {
       trigger: true,
       component: ShoppingCart,
     },
-    {
-      key: 'profile',
-      link: '/Profile',
-      narr: 'Profile',
-      icon: faIdBadge,
-      className: 'icon',
-      trigger: true,
-      component: Profile,
-    },
+
   ];
 
   return (
