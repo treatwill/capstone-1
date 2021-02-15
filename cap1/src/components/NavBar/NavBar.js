@@ -5,16 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './NavBar.css';
 
 
-
+//export const SearchTerm = searchTerm();
+//export const SearchResults = searchResults();
 
 
 const NavBar = ({ linkObjArr }) => (
   <Navbar bg="dark" variant="dark">
     <Link to="/">
       <Navbar.Brand>Treat Kicks</Navbar.Brand>
-
       <input type="text" placeholder="Search" />
-
     </Link>
     <Nav className="ml-auto">
       {linkObjArr.map((linkObj) => (

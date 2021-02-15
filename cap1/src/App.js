@@ -1,17 +1,16 @@
 
 import React, { useState, createContext } from 'react';
-
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 import Products from './components/Products/Products';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import NavBar from './components/NavBar/NavBar';
-import { faTags, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faShoePrints, faWallet } from '@fortawesome/free-solid-svg-icons';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
 export const Cart = createContext();
-//export const SearchTerm = searchTerm();
-//export const SearchResults = searchResults();
+
 
 const App = () => {
 
@@ -23,7 +22,7 @@ const App = () => {
       key: 'products',
       link: '/',
       narr: 'Products',
-      icon: faTags,
+      icon: faShoePrints,
       className: 'icon',
       trigger: true,
       component: Products,
@@ -32,7 +31,7 @@ const App = () => {
       key: 'shopping-cart',
       link: '/Cart',
       narr: 'Shopping Cart',
-      icon: faShoppingCart,
+      icon: faWallet,
       className: 'icon',
       trigger: true,
       component: ShoppingCart,
