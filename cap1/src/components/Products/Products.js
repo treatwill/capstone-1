@@ -172,7 +172,7 @@ const IndProdDisp = ({ product, addToCart, setButtonPopup }) => (
     <img src={product.image} alt={product.name} align="left" />
     <p>{product.name}</p>
   <Dropdown>
-  <Dropdown.Toggle variant="warning" id="dropdown-basic">
+  <Dropdown.Toggle variant="warning" id="dropdown-basic" align="right">
     Details
   </Dropdown.Toggle>
 
